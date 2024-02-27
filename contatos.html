@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="imagex/png" href="https://fonts.google.com/icons?selected=Material%20Icons%20Outlined%3Acall%3A">
+
+    <title>Document</title>
+</head>
+<body>
+    <h1>Página temporáriamente inativa para manutenção e termino de projetos.
+
+    <a href="index.html.html">Voltar para a página inicial</a>
+
+    <a href="https://www.needpix.com/photo/1049095/logo-html-html5-icon-free-pictures-free-photos-free-images-royalty-free-free-illustrations"> 
+        <img class="rodape" src="logo-2582748_1280.png" alt="Foto HTML needpix"></a>
+
+   <a href="https://commons.wikimedia.org/wiki/File:CSS.3.svg"> <img class="rodape" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/CSS.3.svg/800px-CSS.3.svg.png?20160504153216" alt="Imagem da logo css via Wikimedia"></a>
+   
+
+    <a href="https://commons.wikimedia.org/wiki/File:JavaScript_unofficial_logo.svg"> <img class="rodape" src="https://upload.wikimedia.org/wikipedia/commons/7/7a/JavaScript_unofficial_logo.svg" alt="Imagem da logo JavaScript via Wikimedia"></a>
+    <ul>
+        <li class="links" id="baixo1">Foto HTML de Needpix </li>
+        <li class="links" id="baixo2">Foto de Wikimedia Commons</li>
+        <li class="links" id="baixo3">Foto de Wikimedia Commons</li>
+    </ul>
+    <img class="photo" class="fundo" src="WhatsApp Image 2023-08-21 at 22.51.18.jpeg">
+</div>
+</body>
+</html>
+document.addEventListener("DOMContentLoaded", function () {
+    const rodape = document.querySelector('.imagem-container');
+    const imagem = document.querySelector('.imagem-container img');
+  
+    rodape.addEventListener('mousemove', function (e) {
+      const { offsetX, offsetY } = e;
+      const { offsetWidth, offsetHeight } = rodape;
+  
+      const x = (offsetX / offsetWidth) * 100;
+      const y = (offsetY / offsetHeight) * 100;
+  
+      imagem.style.transformOrigin = `${x}% ${y}%`;
+    });
+  });
